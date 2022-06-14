@@ -14,6 +14,7 @@ class pictureTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Picture::factory(100)->create();
+        //to load 100 random fixtures
     }
 }

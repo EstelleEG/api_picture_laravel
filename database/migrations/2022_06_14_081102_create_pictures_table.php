@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('title',255);
             $table->string('url',255);
             $table->string('like');
-            $table->timestamps(); //generate createdat and updatedat
+            $table->timestamps(); //generate created_at and updated_at
         });
     }
 

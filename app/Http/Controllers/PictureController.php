@@ -31,12 +31,12 @@ class PictureController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)   //'create' of the crud
-    {
-        if ( Picture::create( $request->all() ) ){ 
-            return "New picture created successfully!";
-        }
-    }
+    // public function store(Request $request)   //'create' of the crud
+    // {
+    //     if ( Picture::create( $request->all() ) ){ 
+    //         return "New picture created successfully!";
+    //     }
+    // }
 
     /**
      * Display the specified resource.
@@ -56,12 +56,12 @@ class PictureController extends Controller
      * @param  \App\Models\Picture  $picture
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Picture $picture)   //'update' of the crud
-    {
-        if ($picture->update($request->all() ) ){ 
-            return "Picture updated successfully!";
-        }
-    }
+    // public function update(Request $request, Picture $picture)   //'update' of the crud
+    // {
+    //     if ($picture->update($request->all() ) ){ 
+    //         return "Picture updated successfully!";
+    //     }
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -69,10 +69,10 @@ class PictureController extends Controller
      * @param  \App\Models\Picture  $picture
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Picture $picture)    //'delete' of the crud
-    {
-        if ($picture->delete()){ 
-            return "Picture deleted successfully!";
-        }
-    }
+    // public function destroy(Picture $picture)    //'delete' of the crud
+    // {
+    //     if ($picture->delete()){ 
+    //         return "Picture deleted successfully!";
+    //     }
+    // }
 }

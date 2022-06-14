@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AuthPictureController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::controller(RegisterController::class)->group(function(){
     Route::post('register','register'); 
     Route::post('login','login');  //('name route login', 'action/method login')
+});
+
+Route::middleware('auth:sanctum')->group(function(){
+    Route::resource('authpicture', AuthPictureController::class); //route to be able to post a picture
 });
 
 Route::apiResource('picture','\App\Http\Controllers\PictureController');

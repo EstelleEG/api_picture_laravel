@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('pictures', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('author',55);
+            $table->text('description');
+            $table->string('title',255);
+            $table->string('url',255);
+            $table->string('like');
+            $table->timestamps(); //generate createdat and updatedat
         });
     }
 
